@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SplitIntoTest < Minitest::Test
 
-  def test_10
+  def test_integer
     assert_equal [],                    SplitInto.split(10,0)
     assert_equal [10],                  SplitInto.split(10,1)
     assert_equal [5,5],                 SplitInto.split(10,2)
@@ -17,5 +17,7 @@ class SplitIntoTest < Minitest::Test
 
     assert_raises(SplitInto::SplitException) { SplitInto.split(10,-1) } 
     assert_raises(SplitInto::SplitException) { SplitInto.split(10,11) } 
+    assert_raises(SplitInto::SplitException) { SplitInto.split(10.5,5) } 
+    assert_raises(SplitInto::SplitException) { SplitInto.split(10,5.5) } 
   end
 end
