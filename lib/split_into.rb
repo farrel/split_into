@@ -1,5 +1,5 @@
 require 'simplecheck'
-require 'split_into/split_exception'
+require 'split_into/split_error'
 
 module SplitInto
   class <<self
@@ -10,8 +10,8 @@ module SplitInto
     check(dividend, Integer)
     check(divisor, Integer)
 
-    raise(SplitInto::SplitException, 'Divisor is less than zero') if divisor < 0
-    raise(SplitInto::SplitException, 'Divisor is greater than the dividend') if divisor > dividend
+    raise(SplitInto::SplitError, 'Divisor is less than zero') if divisor < 0
+    raise(SplitInto::SplitError, 'Divisor is greater than the dividend') if divisor > dividend
 
     return [] if divisor.zero?
 
@@ -19,6 +19,6 @@ module SplitInto
     dividend.modulo(divisor).times { |i| buckets[i] += 1 } 
     buckets.reverse
   rescue Simplecheck::CheckFailed => exception
-    raise SplitInto::SplitException, exception.message
+    raise SplitInto::SplitError, exception.message
   end
 end
