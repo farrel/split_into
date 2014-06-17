@@ -10,6 +10,8 @@ For instance  8 cents can not be split into 3 parts equally due to the lack of 1
 
 The part components will never differ by more than 1.
 
+This was written partly to dogfood `simplecheck` and see what changes it requires in a real API.
+
 ## Installation
   
     gem install split_into
