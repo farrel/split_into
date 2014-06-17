@@ -19,7 +19,7 @@ class SplitIntoTest < Minitest::Test
   def test_exceptions
     assert_raises(SplitInto::SplitException) { SplitInto.split(10,-1) } 
     assert_raises(SplitInto::SplitException) { SplitInto.split(10,11) } 
-    assert_raises(Simplecheck::CheckFailed) { SplitInto.split(10.5,5) } 
-    assert_raises(Simplecheck::CheckFailed) { SplitInto.split(10,5.5) } 
+    assert_raises(SplitInto::SplitException) { SplitInto.split(10.5,5) } 
+    assert_raises(SplitInto::SplitException) { SplitInto.split(10,5.5) } 
   end
 end

@@ -6,18 +6,19 @@ module SplitInto
     include Simplecheck
   end
 
-  def self.split(number, divisor)
-    check(number, Integer)
+  def self.split(dividend, divisor)
+    check(dividend, Integer)
     check(divisor, Integer)
 
     raise(SplitInto::SplitException, 'Divisor is less than zero') if divisor < 0
-    raise(SplitInto::SplitException, 'Divisor is greater than the dividend') if divisor > number
+    raise(SplitInto::SplitException, 'Divisor is greater than the dividend') if divisor > dividend
 
     return [] if divisor.zero?
 
-    buckets = Array.new(divisor){ number.div(divisor) }
-    quotient = number.modulo(divisor)
-    quotient.times { |i| buckets[i] += 1 }
-    buckets.sort
+    buckets = Array.new(divisor){ dividend.div(divisor) }
+    dividend.modulo(divisor).times { |i| buckets[i] += 1 } 
+    buckets.reverse
+  rescue Simplecheck::CheckFailed => exception
+    raise SplitInto::SplitException, exception.message
   end
 end
