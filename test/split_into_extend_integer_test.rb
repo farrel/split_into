@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'split_into/included'
+require 'split_into/extend_integer'
 
 class SplitIntoIncludedTest < Minitest::Test
 
