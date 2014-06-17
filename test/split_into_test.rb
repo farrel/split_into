@@ -14,10 +14,12 @@ class SplitIntoTest < Minitest::Test
     assert_equal [1,1,1,1,1,1,2,2],     SplitInto.split(10,8)
     assert_equal [1,1,1,1,1,1,1,1,2],   SplitInto.split(10,9)
     assert_equal [1,1,1,1,1,1,1,1,1,1], SplitInto.split(10,10)
+  end
 
+  def test_exceptions
     assert_raises(SplitInto::SplitException) { SplitInto.split(10,-1) } 
     assert_raises(SplitInto::SplitException) { SplitInto.split(10,11) } 
-    assert_raises(SplitInto::SplitException) { SplitInto.split(10.5,5) } 
-    assert_raises(SplitInto::SplitException) { SplitInto.split(10,5.5) } 
+    assert_raises(Simplecheck::CheckFailed) { SplitInto.split(10.5,5) } 
+    assert_raises(Simplecheck::CheckFailed) { SplitInto.split(10,5.5) } 
   end
 end
