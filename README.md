@@ -31,3 +31,8 @@ To extend integer include `split_into/extend_integer`.
     require 'split_into/extend_integer'
 
     10.split_into(4)
+
+## License
+
+SplitInto is distributed under the BSD License.
+
