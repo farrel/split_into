@@ -15,9 +15,9 @@ module SplitInto
 
     return [] if divisor.zero?
 
-    buckets = Array.new(divisor){ dividend.div(divisor) }
-    dividend.modulo(divisor).times { |i| buckets[i] += 1 } 
-    buckets.reverse
+    parts = Array.new(divisor){ dividend.div(divisor) }
+    dividend.modulo(divisor).times { |i| parts[i] += 1 } 
+    parts.reverse
   rescue Simplecheck::CheckFailed => exception
     raise SplitInto::SplitError, exception.message
   end
