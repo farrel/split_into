@@ -8,6 +8,10 @@ For instance  8 cents can not be split into 3 parts equally due to the lack of 1
 
     SplitInto.split(8,3) # => [2, 3, 3]
 
+9 cents can be split equally
+    
+    SplitInto.split(9,3) # => [3, 3, 3]
+
 The part components will never differ by more than 1.
 
 This was written partly to dogfood `simplecheck` and see what changes it requires in a real API.
