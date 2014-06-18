@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'split_into/extend_integer'
 
 class SplitIntoIncludedTest < Minitest::Test
   def test_integer
