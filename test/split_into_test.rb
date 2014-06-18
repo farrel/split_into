@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class SplitIntoTest < Minitest::Test
-
   def test_integer
     assert_equal [],                    SplitInto.split(10,0)
     assert_equal [10],                  SplitInto.split(10,1)

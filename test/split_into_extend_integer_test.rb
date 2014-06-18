@@ -2,7 +2,6 @@ require 'test_helper'
 require 'split_into/extend_integer'
 
 class SplitIntoIncludedTest < Minitest::Test
-
   def test_integer
     assert_equal [],                    10.split_into(0)
     assert_equal [10],                  10.split_into(1)
