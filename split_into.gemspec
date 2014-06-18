@@ -12,6 +12,6 @@ Gem::Specification.new do |s|
 
   s.homepage    = 'https://www.aimred.com/projects/split_into'
 
-  s.add_dependency 'simplecheck', '~> 0'
+  s.add_dependency 'simplecheck', '~> 2.0'
 end
 
