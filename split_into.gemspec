@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version     = '0.1'
   s.licenses    = ['BSD']
   s.summary     = "Split an integer into equally sized component integers"
-  s.description = "Split an integer into  "
+  s.description = "SplitInto is a small API whose sole purpose is to split an integer into equal or roughly equal parts. This is useful when dealing with objects that are not well suited to being split into fractional parts."
   s.author      = "Farrel Lifson"
   s.email       = 'farrel.lifson@aimred.com'
   s.files       = %x{git ls-files}.split("\n")
