@@ -7,11 +7,9 @@ module SplitInto
   end
 
   def self.split(dividend, divisor)
-    check(dividend, Integer)
-    check(divisor, Integer)
-
-    raise(SplitInto::SplitError, 'Divisor is less than zero') if divisor < 0
-    raise(SplitInto::SplitError, 'Divisor is greater than the dividend') if divisor > dividend
+    check(dividend, divisor, Integer, error_message: 'Dividend and divisor must be of type Integer')
+    check(divisor >= 0, error_message: 'Divisor is less than zero')
+    check(divisor <= dividend, error_message: 'Divisor is greater than the dividend')
 
     return [] if divisor.zero?
 
