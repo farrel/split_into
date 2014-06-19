@@ -2,7 +2,7 @@
 
 ## Overview
 
-SplitInto is a small API whose sole purpose is to split an integer into equal or roughly equal parts. This is useful when dealing with objects that are not well suited to being split into fractional parts.
+SplitInto is a micro API whose sole purpose is to split an integer into equal or roughly equal parts. This is useful when dealing with objects that are not well suited to being split into fractional parts.
 
 For instance  8 cents can not be split into 3 parts equally due to the lack of 1/2 cent coins, but can be split into roughly equal parts of 2c, 3c and 3c. Using SplitInto this would be written as: 
 
