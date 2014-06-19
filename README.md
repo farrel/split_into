@@ -46,5 +46,8 @@ If an integer can not be split a `SplitInto::SplitError` exception is raised.
 
 ## License
 
-SplitInto is distributed under the BSD License.
+SplitInto is distributed under the BSD License. See LICENSE file for details.
 
+## Copyright
+
+2014 Aimred CC
