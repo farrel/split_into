@@ -6,11 +6,11 @@ SplitInto is a micro API whose sole purpose is to split an integer into equal or
 
 For instance  8 cents can not be split into 3 parts equally due to the lack of 1/2 cent coins, but can be split into roughly equal parts of 2c, 3c and 3c. Using SplitInto this would be written as: 
 
-    SplitInto.split(8,3) # => [2, 3, 3]
+    SplitInto.split(8,3) # [2, 3, 3]
 
 9 cents can be split equally
     
-    SplitInto.split(9,3) # => [3, 3, 3]
+    SplitInto.split(9,3) # [3, 3, 3]
 
 The part components will never differ by more than 1.
 
@@ -35,6 +35,14 @@ To extend integer include `split_into/extend_integer`.
     require 'split_into/extend_integer'
 
     10.split_into(4)
+
+If an integer can not be split a `SplitInto::SplitError` exception is raised.
+
+    begin
+      SplitInto.split(10,-2) 
+    rescue SplitInto::SplitError => exception
+      puts exception.message # 'Divisor is less than zero'
+    end
 
 ## License
 
