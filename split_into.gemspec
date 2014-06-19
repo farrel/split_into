@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name        = 'split_into'
   s.version     = SplitInto::VERSION
   s.licenses    = ['BSD']
-  s.summary     = "Split an integer into equally sized component integers"
+  s.summary     = "Split an integer into equal or roughly equal sized component integers"
   s.description = "SplitInto is a micro API whose sole purpose is to split an integer into equal or roughly equal parts. This is useful when dealing with objects that are not well suited to being split into fractional parts."
   s.author      = "Farrel Lifson"
   s.email       = 'farrel.lifson@aimred.com'
