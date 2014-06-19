@@ -50,4 +50,4 @@ SplitInto is distributed under the BSD License. See LICENSE file for details.
 
 ## Copyright
 
-2014 Aimred CC
+2014 Aimred CC. All rights reserved.
