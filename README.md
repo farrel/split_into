@@ -28,13 +28,13 @@ As a standalone module:
 
     require 'split_into'
 
-    SplitInto.split(10,4)
+    SplitInto.split(8,4) # [2, 2, 2, 2]
 
 To extend integer include `split_into/extend_integer`.
 
     require 'split_into/extend_integer'
 
-    10.split_into(4)
+    10.split_into(4) # [2, 2, 3, 3]
 
 If an integer can not be split a `SplitInto::SplitError` exception is raised.
 
