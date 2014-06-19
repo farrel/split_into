@@ -2,7 +2,7 @@ require 'simplecheck'
 require 'split_into/split_error'
 
 module SplitInto
-  class <<self
+  class << self
     include Simplecheck
   end
 
