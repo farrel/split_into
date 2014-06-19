@@ -30,7 +30,7 @@ As a standalone module:
 
     SplitInto.split(8,4) # [2, 2, 2, 2]
 
-To extend integer include `split_into/extend_integer`.
+To extend integer require `split_into/extend_integer`.
 
     require 'split_into/extend_integer'
 

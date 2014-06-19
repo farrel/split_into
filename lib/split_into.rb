@@ -12,8 +12,8 @@ module SplitInto
     check(divisor <= dividend, error_message: 'Divisor is greater than the dividend')
 
     return [] if divisor.zero?
-
-    parts = Array.new(divisor){ dividend.div(divisor) }
+    
+    parts = Array.new(divisor) { dividend.div(divisor) }
     dividend.modulo(divisor).times { |i| parts[i] += 1 } 
     parts.reverse
   rescue Simplecheck::CheckFailed => exception
