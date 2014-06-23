@@ -13,7 +13,7 @@ module SplitInto
 
     return [] if divisor.zero?
     
-    parts = Array.new(divisor) { dividend.div(divisor) }
+    parts = Array.new(divisor, dividend.div(divisor))
     dividend.modulo(divisor).times { |i| parts[i] += 1 } 
     parts.reverse
   rescue Simplecheck::CheckFailed => exception
